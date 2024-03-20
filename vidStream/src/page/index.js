@@ -1,5 +1,6 @@
 import SigninForm from "./SignIn";
-import SignupForm from "./SignUp";
+import SignUpForm from "./SignUp";
 import Videos from "./Videos";
+import ErrorPage from "./ErrorPage";
 
-export {SigninForm, SignupForm,Videos};
+export {SigninForm,ErrorPage, SignUpForm,Videos};

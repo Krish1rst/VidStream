@@ -5,9 +5,7 @@ const SigninForm = () => {
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add signin logic here
-    console.log('Signing in with:', email, password);
+
   };
 
   return (
