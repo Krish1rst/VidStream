@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Recorder with Canvas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Video Recorder</h1>
+    
+    <div class="control-group">
+        <label for="videoTitle">Video Title:</label>
+        <input type="text" id="videoTitle" placeholder="Enter title" />
+        <button id="saveTitleButton">Save Title</button>
+    </div>
+    
+    <div class="video-container">
+        <video id="video" muted autoplay></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+    
+    <div id="timer">00:00:00</div>
+    
+    <div class="button-group">
+        <button id="start-record">Start Recording</button>
+        <button id="pause-record">Pause Recording</button>
+        <button id="continue-record">Continue Recording</button>
+        <button id="stop-record">Stop Recording</button>
+        <button id="download-record">Download Recording</button>
+        <button id="capture-screenshot">Capture Screenshot</button>
+    </div>
+    
+    <div class="control-group">
+        <label for="quality">Select Quality:</label>
+        <select id="quality">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+        </select>
+
+        <label for="db-version">Select DB Version:</label>
+        <select id="db-version">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    
+    <button id="history-button">Show History</button>
+    <div id="recorded-videos"></div>
+
+    <!-- Include the ffmpeg library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ffmpeg.js/0.12.10/ffmpeg.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@latest"></script>
+    <!-- Your scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
